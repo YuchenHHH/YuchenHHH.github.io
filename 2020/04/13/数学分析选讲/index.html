@@ -1,0 +1,136 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>数学分析选讲笔记 | Yuchen's Math Note</title><meta name="description" content="数学分析选讲笔记"><meta name="author" content="Yuchen Huang"><meta name="copyright" content="Yuchen Huang"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="数学分析选讲笔记"><meta name="twitter:description" content="数学分析选讲笔记"><meta name="twitter:image" content="http://yoursite.com/img/post.jpg"><meta property="og:type" content="article"><meta property="og:title" content="数学分析选讲笔记"><meta property="og:url" content="http://yoursite.com/2020/04/13/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E9%80%89%E8%AE%B2/"><meta property="og:site_name" content="Yuchen's Math Note"><meta property="og:description" content="数学分析选讲笔记"><meta property="og:image" content="http://yoursite.com/img/post.jpg"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>var autoChangeMode = '1'
+var t = Cookies.get("theme")
+if (autoChangeMode == '1'){
+  var isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+  var isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+  var isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined){
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport){
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour < 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+  }
+  } else if (t == 'light') activateLightMode()
+  else activateDarkMode()
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="canonical" href="http://yoursite.com/2020/04/13/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E9%80%89%E8%AE%B2/"><link rel="prev" title="PDE-Notes" href="http://yoursite.com/2020/04/14/PDE-Notes/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days',
+  runtime: true,
+  copyright: {"languages":{"author":"Author: Yuchen Huang","link":"Link: ","source":"Source: Yuchen's Math Note","info":"Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source."}},
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  highlightShrink: 'false',
+  isFontAwesomeV5: false,
+  isPhotoFigcaption: false
+  
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isSidebar: true  
+  }</script><noscript><style>
+#page-header {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div></div></div></div><i class="fa fa-arrow-right on" id="toggle-sidebar" aria-hidden="true">     </i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#隐函数求导"><span class="toc-number">1.</span> <span class="toc-text">隐函数求导</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#隐函数存在定理"><span class="toc-number">1.1.</span> <span class="toc-text">隐函数存在定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#微分式变换"><span class="toc-number">1.2.</span> <span class="toc-text">微分式变换</span></a></li></ol></li></ol></div></div></div><div id="body-wrap"><div class="post-bg" id="nav" style="background-image: url(/img/post.jpg)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">Yuchen's Math Note</a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> Categories</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span></span></div><div id="post-info"><div id="post-title"><div class="posttitle">数学分析选讲笔记</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="Created 2020-04-13 20:48:13"><i class="fa fa-calendar" aria-hidden="true"></i> Created 2020-04-13</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="Updated 2020-04-16 12:13:02"><i class="fa fa-history" aria-hidden="true"></i> Updated 2020-04-16</span></time></div><div class="meta-secondline"> </div><div class="meta-thirdline"><span class="post-meta-pv-cv"><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>Post View:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"></span></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div id="article-container"><h2 id="隐函数求导"><a href="#隐函数求导" class="headerlink" title="隐函数求导"></a>隐函数求导</h2><h3 id="隐函数存在定理"><a href="#隐函数存在定理" class="headerlink" title="隐函数存在定理"></a>隐函数存在定理</h3><p><strong>定理 1.1</strong>  若函数 $F(x,y,u,v)$, $G(x,y,u,v)$ 满足如下条件：</p>
+<ol>
+<li>$F(x_0,y_0,u_0,v_0)=G(x_0,y_0,u_0,v_0)=0$;</li>
+<li>$F$ 和 $G$ 在$(x_0,y_0,u_0,v_0)$的某邻域内有连续的偏导数;</li>
+<li>$F$、$G$ 在 $(x_0,y_0,u_0,v_0)$ 处关于变量 $u,v$ 的 Jacobi 行列式<br>$$<br>J:=\operatorname{det}\begin{pmatrix}<br>F_u &amp; F_v \<br>G_u &amp; G_v<br>\end{pmatrix}\Big|_{(x_0,y_0,u_0,v_0)}\neq0.<br>$$</li>
+</ol>
+<p>则存在 $p_0:=(x_0,y_0)$ 的一个邻域 $U(p_0)$ ，使得</p>
+<p>$$<br>\begin{cases}<br>    F(x,y,u,v)=0,\<br>    G(x,y,u,v)=0<br>    \end{cases}<br>$$<br>在 $U(p_0)$ 内可唯一确定隐函数组<br>$$<br>\begin{cases}<br>u=u(x,y)\<br>v=v(x,y)<br>\end{cases}<br>$$<br>满足: $u=u(x_0,y_0) , v=v(x_0,y_0) $ 且 $u(x,y)$ 和 $v(x,y)$ 在 $U(P_0)$</p>
+<p>具有一阶连续偏导数，且满足<br>$$<br>\begin{cases}F_x+F_u u_x+F_v v_x=0\G_x+G_u u_x+G_v v_x=0\end{cases}\quad and \quad\begin{cases}F_y+F_u u_y+F_v v_y=0\G_y+G_u u_y+G_v v_y=0\end{cases}.<br>$$</p>
+<p><strong>例 1.2</strong>  设 $u=f(x,y)$、$v=g(x,y)$ 在 $(x_0,y_0)$ 某邻域内连续且有一阶偏导，且满足<br>$$<br>\frac{\partial(f,g)}{\partial (x, y)}:=\operatorname{det}\begin{pmatrix}<br>f_x &amp; f_y \<br>g_x &amp; g_y<br>\end{pmatrix}\Big|_{(x_0,y_0)}\neq0.<br>$$<br>证明方程组 $\begin{cases}<br>u=f(x,y)\<br>v=g(x,y)<br>\end{cases}$ 在 $(x_0,y_0)$ 对应点 $(u_0,v_0)$ 的某个邻域内确定一组反函数 $x=x(u,v), y=y(u,v)$, 并求反函数的偏导数. </p>
+<p><strong>证明</strong>:  令$F(x,y,u,v)=u-f(x,y)$，$G(x,y,u,v)=v-g(x,y)$ , 则 $F,G$ 在 $(x_0,y_0,u_0,v_0)$ 某邻域内有一阶连续偏导，其中 $u_0=f(x_0,y_0),v_0=g(x_0,y_0)$.</p>
+<p>因为<br>$$<br>\frac{\partial(F,G)}{\partial (x,y)}|<em>{(x_0,y_0,u_0,v_0)}=<br>\left|\begin{array}{cccc}<br>-f_x&amp;-f_y\<br>-g_x&amp;-g_y<br>\end{array}\right|</em>{(x_0,y_0,u_0,v_0)}\neq0<br>$$<br>由隐函数定理可知$\begin{cases}u=f(x,y)\v=g(x,y)\end{cases}$ 在 $(u_0,v_0)$ 内唯一确定隐函数组 $\begin{cases}x=x(u,v)\y=y(u,v)\end{cases}$, 且它们有一阶连续偏导.</p>
+<p>两边对 $u$ 求偏导得<br>$$<br>\begin{cases}<br>1=f_xx_u+f_yy_u\<br>0=g_xx_u+g_yy_u<br>\end{cases}<br>$$<br>于是有<br>$$<br>\begin{cases}<br>x_u=\frac{g_y}{f_xg_y-g_xf_y}\<br>y_u=\frac{g_x}{f_yg_x-g_yf_x}<br>\end{cases}<br>$$<br>类似方法可以求得 $x_v$ 和 $y_u$</p>
+<p><strong>例1.3</strong>  设$u=f(x-ut,y-ut,z-ut)$ , $g(x,y,z)=0$. 求 $u_x$, $u_y$.</p>
+<p><strong>证明:</strong><br>$$<br>\begin{cases}<br>u-f(x-ut,y-ut,z-ut)=0\<br>g(x,y,z)=0<br>\end{cases}<br>$$<br>两边对 $x$ 求偏导得<br>$$<br>\begin{cases}<br>u_x-f’_1(1-u_xt)-f’_2(-u_xt)-f’_3(z_x-u_xt)=0\<br>g’_1+g’_3z_x=0<br>\end{cases}<br>$$<br>解得<br>$$<br>u_x=\frac{g’_3f’_1-g’_1f’_3}{g’_3(1+f’_1t+f’_2t+f’_3t)}<br>$$<br>类似可求$u_y$</p>
+<p><strong>例1.4</strong>  设 $z=f(x,y)$ 具有二阶连续偏导数，且 $\frac{\partial f}{\partial y}\neq 0$ . 证明: $f(x,y)=1$为一直线的充要条件是：<br>$$<br>f_y^2f_{xx}-2f_xf_yf_{xy}+f_{yy}f_{x}^2=0.\tag{1.1}<br>$$<br><strong>证明:</strong>  由 $\frac{\partial f}{\partial y}\neq 0$ 知, $f(x,y)=1$ 可以确定 $y=y(x)$ .</p>
+<p>$\Rightarrow$  如果 $y(x)=ax+b$, 于是 $y-ax-b=0$, 所以 $f(x,y)-1=c(y-ax-b)$, 从而 $f(x,y)=c(y-ax-b)+1$, 立即可得 $(1.1)$ 式</p>
+<p>$\Leftarrow$  若$(1.1)$ 式成立, 只需证明 $y’’(x)=0$ 事实上对$f(x,y)=1$ 求一阶导:<br>$$<br>f_x+f_yy’=0<br>$$<br>即 $y’=-\frac{f_x}{f_y}$ , 再次求导得:<br>$$<br>\begin{aligned}<br>y’’&amp;=(-\frac{f_x}{f_y})<em>x\<br>&amp;=-\frac{(f</em>{xx}+f_{xy}y’)f_y-f_x(f_{yx}+f_{yy}y’)}{f_y^2}\<br>&amp;=-\frac{1}{f_y^2}(f_y^2f_{xx}-2f_xf_yf_{xy}+f_{yy}f_{x}^2)\<br>&amp;=0<br>\end{aligned}<br>$$<br>综上,  $f(x,y)=1$为一直线的充要条件是 $f_y^2f_{xx}-2f_xf_yf_{xy}+f_{yy}f_{x}^2=0$.</p>
+<h3 id="微分式变换"><a href="#微分式变换" class="headerlink" title="微分式变换"></a>微分式变换</h3><p><strong>定理2.1</strong>  设$z=f(x,y)$有一阶连续偏导，作变量代换$\begin{cases}x=x(u,v)\y=y(u,v)\end{cases}$,则$f$的偏导数在坐标$u,v$下有如下的变换公式<br>$$<br>\begin{cases}<br>\frac{\partial f}{\partial x}=\frac{\partial z}{\partial u}\cdot\frac{\partial u}{\partial x}+\frac{\partial z}{\partial v}\cdot\frac{\partial v}{\partial x}\<br>\frac{\partial f}{\partial y}=\frac{\partial z}{\partial u}\cdot\frac{\partial u}{\partial y}+\frac{\partial z}{\partial v}\cdot\frac{\partial v}{\partial y}<br>\end{cases}<br>$$<br>其中$u_x,y_y,v_x,v_y$是函数组$\begin{cases}x=x(u,v)\y=y(u,v)\end{cases}$所确定的反函数组$\begin{cases}u=u(x,y)\v=v(x,y)\end{cases}$的偏导数.</p>
+<p><strong>例2.2</strong>  设$f(x,y)$满足方程<br>$$<br>(\frac{\partial f}{\partial x})^2+(\frac{\partial f}{\partial y})^2=\frac{1}{\sqrt{x^2+y^2}}<br>$$<br>若作变换$x=uv,y=\frac 1 2 (u^2-v^2)$, 求$z=f(x,y)$在$u,v$坐标下所满足的方程.</p>
+<p><strong>解:</strong>  由题目条件可得:<br>$$<br>\begin{cases}<br>u_x=\frac{v}{u^2+v^2}\<br>v_x=\frac{u}{u^2+v^2}<br>\end{cases}<br>\quad和\quad<br>\begin{cases}<br>u_y=\frac{u}{u^2+v^2}\<br>v_y=-\frac{v}{u^2+v^2}<br>\end{cases}<br>$$<br>从而<br>$$<br>f_x=z_uu_x+z_vv_z=\frac{vz_u+uz_v}{u^2+v^2}<br>$$</p>
+<p>$$<br>f_y=\frac{uz_u-vz_v}{u^2+v^2}<br>$$</p>
+<p>所以<br>$$<br>f_x^2+f_y^2=\frac{1}{(u^2+v^2)^2}<br>$$</p>
+<p>$$<br>x^2+y^2=\frac{(u^2+v^2)^2}{4}<br>$$</p>
+<p>所以<br>$$<br>z_u^2+z_v^2=2.<br>$$<br><strong>例2.3</strong>  证明2维Laplace算子$\Delta:=\frac{\partial^2}{\partial x^2 }+\frac{\partial^2}{\partial y^2}$在极坐标下为：<br>$$<br>\Delta=\frac{\partial^2}{\partial r^2}+\frac{1}{r}\frac{\partial}{\partial r}+\frac{1}{r^2}\frac{\partial^2}{\partial \theta^2}.<br>$$<br><strong>证明:</strong>  令$x=r\cos \theta,y=r\sin\theta,z=f(x,y)$,则<br>$$<br>f(x,y)=z(r,\theta)=z(r(x,y),\theta(x,y))<br>$$<br>又$r_x=\frac{x}{r},r_y=\frac{y}{r},\theta=\arctan\frac{y}{x}$,于是<br>$$<br>\theta_x=-\frac{y}{r^2},\theta_y=\frac{x}{r^2}<br>$$<br>故<br>$$<br>f_x=z_r\frac{x}{r}+z_\theta(-\frac{y}{r^2})<br>$$</p>
+<p>$$<br>f_{xx}=\frac{x^2}{r^2}z_{rr}-2\frac{xy}{r^3}+\frac{y^2}{r^4}z_{\theta\theta}+\frac{y^2}{r^3}z_r+\frac{2xy}{r^4}z_{\theta}<br>$$</p>
+<p>类似地, 有<br>$$<br>f_{yy}=\frac{y^2}{r^2}z_{rr}+2\frac{xy}{r^3}+\frac{x^2}{r^4}z_{\theta\theta}+\frac{x^2}{r^3}z_r-\frac{2xy}{r^4}z_{\theta}<br>$$<br>相加得<br>$$<br>\Delta f=z_{rr}+\frac{1}{r^2}z_{\theta\theta}+\frac{1}{r}z_r=(\frac{\partial^2}{\partial r}+\frac{1}{r}\frac{\partial}{\partial r}+\frac{1}{r^2}\frac{\partial^2}{\partial \theta^2})z<br>$$<br><strong>例2.4</strong>  设$z=f(x,y)$满足<br>$$<br>x^2f_x+y^2f_y=f^2,<br>$$<br>若有</p>
+<p>$$<br>\begin{cases}<br>x=t\<br>y=\frac{t}{1+tu}\<br>z=\frac{t}{1+tv}<br>\end{cases}<br>$$</p>
+<p>试求$v=v(t,u)$所满足的微分方程.</p>
+<p><strong>解:</strong>  </p>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">Yuchen Huang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://yoursite.com/2020/04/13/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E9%80%89%E8%AE%B2/">http://yoursite.com/2020/04/13/%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90%E9%80%89%E8%AE%B2/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/post.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/2020/04/14/PDE-Notes/"><img class="prev_cover lazyload" data-src="/img/post.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">PDE-Notes</div></div></a></div></nav></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By Yuchen Huang</div><div class="framework-info"><span>Driven </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="Read Mode"></i><i class="fa fa-plus" id="font_plus" title="Increase font size"></i><i class="fa fa-minus" id="font_minus" title="Decrease font size"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="Traditional Chinese and Simplified Chinese Conversion" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="Dark Mode"></i></div><div id="rightside-config-show"><div id="rightside_config" title="Setting"><i class="fa fa-cog" aria-hidden="true"></i></div><i class="fa fa-list-ul close" id="mobile-toc-button" title="Table of Contents" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="Back to top" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script id="canvas_nest" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="/js/third-party/canvas-nest.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script></body></html>
